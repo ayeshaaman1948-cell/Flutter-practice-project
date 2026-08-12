@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_application/styled_text.dart';
 
-class GradientContainer extends StatelessWidget {
+class GradientContainerWithStudentInfo extends StatelessWidget {
   final Color color1;
   final Color color2;
-  const GradientContainer(this.color1, this.color2);
+  const GradientContainerWithStudentInfo(this.color1, this.color2);
 
   @override
   Widget build(context) {
     return Container(
-      width: 600,
+      width: 700,
       height: 900,
-      margin: EdgeInsets.all(10),
+      // margin: EdgeInsets.all(5),
       //padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
         // color: const Color.fromARGB(21, 251, 252, 249),
@@ -21,9 +22,28 @@ class GradientContainer extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(30),
+        // borderRadius: BorderRadius.circular(30),
       ),
-      child: Center(child: Image.asset("assets/images/profile pic.png")),
+      child: Column(
+        children: [
+          StyledText("Name : Ayesha Aman"),
+          StyledText("     "),
+          StyledText("University name:IMsciences"),
+          StyledText("     "),
+          StyledText("Dept name:DataSciences"),
+          StyledText("     "),
+          StyledText("Age: 19"),
+          StyledText("     "),
+          StyledText("Semester:3"),
+          StyledText("     "),
+          StyledText("CGPA:3.42"),
+          StyledText("     "),
+
+          StyledText("Skills:Oop programming"),
+          StyledText("     "),
+          StyledText("Skills:Dart"),
+        ],
+      ),
     );
   }
 }

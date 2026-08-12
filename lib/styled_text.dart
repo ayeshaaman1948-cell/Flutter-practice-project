@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
   final String text;
+
   const StyledText(this.text);
 
   @override
@@ -9,8 +10,8 @@ class StyledText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        color: const Color.fromARGB(92, 176, 40, 120),
-        fontSize: 19,
+        color: const Color.fromARGB(221, 17, 1, 10),
+        fontSize: 30,
       ),
     );
   }

@@ -11,11 +11,11 @@ void main() {
             "Data Science Student Profile :Ayesha Aman ",
             style: TextStyle(fontSize: 17, color: Colors.white),
           ),
-          backgroundColor: const Color.fromARGB(255, 144, 20, 32),
+          backgroundColor: const Color.fromARGB(237, 5, 205, 208),
         ),
-        body: GradientContainer(
-          const Color.fromARGB(190, 248, 246, 121),
-          const Color.fromARGB(255, 242, 117, 158),
+        body: GradientContainerWithStudentInfo(
+          const Color.fromARGB(188, 44, 220, 236),
+          const Color.fromARGB(255, 223, 212, 208),
         ),
       ),
     ),
