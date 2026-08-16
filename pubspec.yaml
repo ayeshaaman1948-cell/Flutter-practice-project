@@ -21,5 +21,11 @@ dev_dependencies:
 flutter:
     uses-material-design: true
     assets:
+    - assets/images/golden.jpeg
+    - assets/images/companion_picture.jpeg
     - assets/images/profile pic.png
     - assets/images/profilepic2.jpeg
+    - assets/images/image3offlower.jpeg
+    - assets/images/image1offloweer.jpeg
+    - assets/images/image2offlower.jpeg
+    - assets/images/appBar_pic.jpeg
