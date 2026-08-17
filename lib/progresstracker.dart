@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "package:google_fonts/google_fonts.dart";
 import "package:my_first_application/AppBarContainers.dart";
 import "package:my_first_application/containerfordata.dart";
+import "package:my_first_application/styled_text_for_progresstracker.dart";
 
 class ProgressTracker extends StatelessWidget {
   @override
@@ -44,15 +45,62 @@ class ProgressTracker extends StatelessWidget {
           SizedBox(height: 7),
           Center(
             child: Image.asset(
-              "assets/images/compainpic.jpeg",
+              "assets/images/companion_picture.jpeg",
               height: 200,
               width: 300,
             ),
           ),
           SizedBox(height: 20),
-          ContainersForData(100, 360),
+          ContainersForData(100, 360, [
+            StyledText("Rating", 25, Color.fromARGB(251, 128, 102, 92)),
+            StyledText(
+              "The Upward Trend",
+              15,
+              Color.fromARGB(255, 225, 153, 205),
+            ),
+
+            StyledText(
+              "Getting better over time.Progress is progress",
+              15,
+              Color.fromARGB(255, 225, 153, 205),
+            ),
+          ]),
           SizedBox(height: 14),
-          ContainersForData(100, 360),
+          ContainersForData(100, 360, [
+            StyledText("Time of Day", 25, Color.fromARGB(251, 128, 102, 92)),
+            StyledText("Bookends", 20, Color.fromARGB(255, 225, 153, 205)),
+            StyledText(
+              "You open and close the day with ritual",
+              15,
+              Color.fromARGB(255, 225, 153, 205),
+            ),
+          ]),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ContainersForData(100, 150, [
+                StyledText(
+                  "Focused Hours",
+                  20,
+                  Color.fromARGB(251, 128, 102, 92),
+                ),
+                StyledText("Today", 19, Color.fromARGB(255, 225, 153, 205)),
+                StyledText("5 hrs", 18, Color.fromARGB(175, 106, 224, 112)),
+              ]),
+              SizedBox(width: 50),
+
+              ContainersForData(100, 150, [
+                StyledText(
+                  "Total breaks",
+                  20,
+                  Color.fromARGB(251, 128, 102, 92),
+                ),
+                StyledText("Today", 19, Color.fromARGB(255, 225, 153, 205)),
+                StyledText("2 hrs", 18, Color.fromARGB(175, 106, 224, 112)),
+              ]),
+            ],
+          ),
         ],
       ),
 

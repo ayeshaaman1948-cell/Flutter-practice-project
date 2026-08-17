@@ -5,8 +5,8 @@ class AppBarContainers extends StatelessWidget {
   final String text;
   final double height;
   final double width;
-  Color buttonColors = Colors.brown;
-  AppBarContainers(this.text, this.height, this.width);
+  final Color buttonColors = Colors.brown;
+  const AppBarContainers(this.text, this.height, this.width);
 
   @override
   Widget build(contex) {

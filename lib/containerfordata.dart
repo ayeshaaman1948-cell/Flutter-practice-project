@@ -4,7 +4,8 @@ import "package:my_first_application/styled_text_for_progresstracker.dart";
 class ContainersForData extends StatelessWidget {
   final double height;
   final double width;
-  const ContainersForData(this.height, this.width);
+  final List<StyledText> styledTextContainer;
+  const ContainersForData(this.height, this.width, this.styledTextContainer);
   @override
   Widget build(context) {
     return Container(
@@ -13,28 +14,21 @@ class ContainersForData extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color.fromARGB(125, 213, 152, 196),
-            Color.fromARGB(178, 117, 89, 78),
+            Color.fromARGB(105, 220, 7, 160),
+            Color.fromARGB(199, 195, 183, 172),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(9),
       ),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          StyledText("Rating:", 20, Color.fromARGB(251, 128, 102, 92)),
-          StyledText(
-            "The Upward Trend",
-            15,
-            Color.fromARGB(255, 225, 153, 205),
-          ),
-          StyledText(
-            "Getting better over time.Progress is progress",
-            15,
-            Color.fromARGB(255, 225, 153, 205),
-          ),
+          styledTextContainer[0],
+          styledTextContainer[1],
+          styledTextContainer[2],
         ],
       ),
     );
