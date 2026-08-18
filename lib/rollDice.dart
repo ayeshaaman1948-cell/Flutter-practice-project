@@ -1,7 +1,9 @@
 import "package:flutter/material.dart";
-import "package:google_fonts/google_fonts.dart";
+import "package:my_first_application/DiceRollingAtRuntime.dart";
 
 class Dice extends StatelessWidget {
+  const Dice({super.key});
+
   @override
   Widget build(context) {
     return Container(
@@ -14,30 +16,7 @@ class Dice extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              "assets/images/dice3_picture.png",
-              width: 100,
-              height: 150,
-            ),
-
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(185, 221, 102, 142),
-                elevation: 6,
-              ),
-              child: Text(
-                "Roll Dice",
-                style: GoogleFonts.aboreto(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
-      ),
+      child: Center(child: DiceRollingAtRuntime()),
     );
   }
 }
