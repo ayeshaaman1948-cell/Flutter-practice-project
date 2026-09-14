@@ -16,8 +16,8 @@ class StyledText extends StatelessWidget {
     return Text(
       data,
       style: GoogleFonts.alexandria(
-        color: Colors.black,
-        fontSize: 18,
+        color: fontColor,
+        fontSize: fontSize,
         fontWeight: FontWeight.bold,
       ),
     );

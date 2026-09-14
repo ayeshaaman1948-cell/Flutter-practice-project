@@ -13,7 +13,7 @@ class StartingPage extends StatelessWidget {
         SizedBox(height: 9),
         StyledText(
           data: "Learn flutter the fun way",
-          fontSize: 25,
+          fontSize: 20,
           fontColor: Colors.white,
         ),
         SizedBox(height: 9),
