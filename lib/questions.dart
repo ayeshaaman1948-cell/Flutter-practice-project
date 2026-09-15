@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import "package:google_fonts/google_fonts.dart";
 import "package:quiz_app/answerButtonTemplate.dart";
 import "package:quiz_app/model/questionscontainer.dart";
-import "package:quiz_app/model/quizQuestion.dart";
 
 class Questions extends StatefulWidget {
   final void Function(String answer) selectedAnswer;
@@ -27,6 +26,8 @@ class _QuestionsState extends State<Questions> {
 
   @override
   Widget build(context) {
+    currentQuestion[indexOfQuestion].shuffleAnswers();
+
     return Container(
       margin: EdgeInsets.all(20),
       child: Column(

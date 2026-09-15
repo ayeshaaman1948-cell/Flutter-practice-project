@@ -5,8 +5,9 @@ class QuizQuestion {
   QuizQuestion({required this.text, required this.answers});
 
   List<String> shuffleAnswers() {
-    List<String> shuffledAnswers = answers;
+    List<String> shuffledAnswers = [...answers];
     shuffledAnswers.shuffle();
+
     return shuffledAnswers;
   }
 }

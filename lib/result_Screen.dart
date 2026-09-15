@@ -5,8 +5,13 @@ import "package:quiz_app/QuestionSummary.dart";
 
 class ResultScreen extends StatelessWidget {
   final List<String> chosenAnswers;
+  final void Function() switchScreen;
 
-  const ResultScreen({super.key, required this.chosenAnswers});
+  const ResultScreen({
+    super.key,
+    required this.chosenAnswers,
+    required this.switchScreen,
+  });
 
   List<Map<String, Object>> summaryFunction() {
     final List<Map<String, Object>> summary = [];
@@ -45,7 +50,7 @@ class ResultScreen extends StatelessWidget {
       child: Center(
         child: SizedBox(
           height: 600,
-          width: 400,
+          width: 300,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +70,9 @@ class ResultScreen extends StatelessWidget {
                     backgroundColor: const Color.fromARGB(206, 72, 162, 236),
                     padding: EdgeInsets.all(10),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    switchScreen();
+                  },
                   child: StyledText(
                     data: "restartQuiz",
                     fontSize: 20,

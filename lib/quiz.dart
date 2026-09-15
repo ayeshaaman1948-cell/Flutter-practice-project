@@ -16,12 +16,17 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   late Widget activeScreen;
   List<String> chosenAnswers = [];
+  String checkForResultScreen = "not set";
 
   void chooseAnswer(String answer) {
     chosenAnswers.add(answer);
     if (chosenAnswers.length == questions.length) {
       setState(() {
-        activeScreen = ResultScreen(chosenAnswers: chosenAnswers);
+        activeScreen = ResultScreen(
+          chosenAnswers: chosenAnswers,
+          switchScreen: switchScreen,
+        );
+        checkForResultScreen = "set";
       });
     }
   }
@@ -34,7 +39,13 @@ class _QuizState extends State<Quiz> {
 
   void switchScreen() {
     setState(() {
-      activeScreen = Questions(selectedAnswer: chooseAnswer);
+      if (checkForResultScreen == "set") {
+        activeScreen = StartingPage(switchScreen);
+        chosenAnswers = [];
+        checkForResultScreen = " not set";
+      } else {
+        activeScreen = Questions(selectedAnswer: chooseAnswer);
+      }
     });
   }
 

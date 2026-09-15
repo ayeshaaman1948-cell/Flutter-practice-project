@@ -17,7 +17,7 @@ class QuestionsSummary extends StatelessWidget {
               fontColor: Colors.black,
               fontSize: 18,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 7),
             StyledText(
               data: data["Correct Answer"] as String,
               fontColor: Colors.lightBlue,
