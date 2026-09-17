@@ -18,6 +18,7 @@ class ResultScreen extends StatelessWidget {
 
     for (int i = 0; i < chosenAnswers.length; i++) {
       summary.add({
+        "Question index": (i + 1).toString(),
         "Question": questions[i].text,
         "Correct Answer": questions[i].answers[0],
         "User selected Answer:": chosenAnswers[i],
@@ -50,7 +51,7 @@ class ResultScreen extends StatelessWidget {
       child: Center(
         child: SizedBox(
           height: 600,
-          width: 300,
+          width: 400,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
