@@ -12,6 +12,20 @@ class QuestionsSummary extends StatelessWidget {
       children: [
         ...summary.expand((data) {
           return [
+            Row(
+              children: [
+                Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: StyledText(
+                    data: data["Question index"] as String,
+                    fontColor: Colors.black,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
             StyledText(
               data: data["Question"] as String,
               fontColor: Colors.black,
